@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  app:
+    build: 
+      context: ./container
+      dockerfile: DockerFile
+    
+    container_name: 'ChatApp'
+    ports:
+      - '8000:8000'
+    tty: true
+
+    volumes:
+      - ./src:/root/workspace
